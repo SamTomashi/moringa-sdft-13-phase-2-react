@@ -1,13 +1,4 @@
-export default function TransactionRow({transaction, transactions, setTransactions}){
-
-    function handleRemove(event){
-        const newTransactions = transactions.filter((t) => {
-            return t.id !== Number(event.target.id)
-        })
-        setTransactions(newTransactions)
-    }
-
-  
+export default function TransactionRow({transaction, removeTransaction}){
 
     return(
         <tr>
@@ -15,7 +6,7 @@ export default function TransactionRow({transaction, transactions, setTransactio
             <td>{transaction.type}</td>
             <td>{transaction.amount}</td>
             <td>
-                <button id={transaction.id} onClick={handleRemove} className="btn btn-sm btn-danger">X</button>
+                <button onClick={()=> removeTransaction(transaction.id)} className="btn btn-sm btn-danger">X</button>
             </td>
         </tr>
     )
