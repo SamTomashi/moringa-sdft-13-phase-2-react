@@ -18,7 +18,8 @@ export default function TransactionForm({setTransactions}) {
 
 
   return (
-    <form onSubmit={handleSubmit} className="p-2 m-4 border rounded col-3">
+    <div className="col-3">
+    <form onSubmit={handleSubmit} className="p-2 m-4 border rounded">
         <h6>Add Transaction</h6>
       <div className="mb-3">
         <label htmlFor="transactionType" className="form-label">
@@ -52,5 +53,6 @@ export default function TransactionForm({setTransactions}) {
         <button className="btn btn-dark btn-sm" type="submit">Submit</button>
       </div>
     </form>
+    </div>
   );
 }

@@ -11,7 +11,8 @@ export default function TransactionsTable({transactions, setTransactions}) {
   }
 
   return (
-    <table className="table table-striped p-4">
+    <div className="col">
+      <table className="table table-striped p-4">
       <thead>
         <tr>
           <th>Transaction ID</th>
@@ -30,5 +31,6 @@ export default function TransactionsTable({transactions, setTransactions}) {
         ))}
       </tbody>
     </table>
+    </div>
   );
 }
