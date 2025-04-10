@@ -1,5 +1,5 @@
-import TransactionRow from "./TransactionRow";
 import { useState } from "react";
+import TransactionRow from "./TransactionRow";
 
 export default function TransactionsTable() {
   const [transactions, setTransactions] = useState([
@@ -13,10 +13,22 @@ export default function TransactionsTable() {
       type: "Withdrawal",
       amount: 1000,
     },
+    {
+      id: 3,
+      type: "Sending",
+      amount: 400000,
+    },
+    {
+      id: 4,
+      type: "Payment",
+      amount: 1000000,
+    },
   ]);
 
-  function handleRemove(id){
-    setTransactions((prev) => prev.filter((t) => t.id !== id));
+  function handleRemove(id) {
+    setTransactions((prev) =>
+      prev.filter((transaction) => transaction.id !== id)
+    );
   }
 
   return (
@@ -32,9 +44,8 @@ export default function TransactionsTable() {
       <tbody>
         {transactions.map((transaction) => (
           <TransactionRow
-            key={transaction.id}
             transaction={transaction}
-            removeTransaction={handleRemove}
+            handleRemove={handleRemove}
           />
         ))}
       </tbody>
