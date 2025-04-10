@@ -4,10 +4,9 @@ export default function TransactionForm({setTransactions}) {
     const [type, setType] = useState("Withdrawal")
     const [amount, setAmount] = useState(1)
 
-    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-  // return letters.charAt(Math.floor(Math.random() * letters.length));
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-    let id =  `${letters.charAt(Math.floor(Math.random() * letters.length))}${Math.floor(Math.random() * 1000)}${letters.charAt(Math.floor(Math.random() * letters.length))}`
+    let id =  `${letters.charAt(Math.floor(Math.random() * letters.length))}${Math.floor(Math.random() * 100000)}${letters.charAt(Math.floor(Math.random() * letters.length))}`
 
     function handleSubmit(event){
         event.preventDefault()
@@ -19,7 +18,7 @@ export default function TransactionForm({setTransactions}) {
 
 
   return (
-    <form onSubmit={handleSubmit} className="p-2 m-4 border rounded">
+    <form onSubmit={handleSubmit} className="p-2 m-4 border rounded col-3">
         <h6>Add Transaction</h6>
       <div className="mb-3">
         <label htmlFor="transactionType" className="form-label">

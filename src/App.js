@@ -7,25 +7,10 @@ function App() {
 
   const [transactions, setTransactions] = useState([
       {
-        id: 1,
+        id: "M8503V",
         type: "Deposit",
         amount: 3000,
-      },
-      {
-        id: 2,
-        type: "Withdrawal",
-        amount: 1000,
-      },
-      {
-        id: 3,
-        type: "Sending",
-        amount: 400000,
-      },
-      {
-        id: 4,
-        type: "Payment",
-        amount: 1000000,
-      },
+      }
     ]);
 
 

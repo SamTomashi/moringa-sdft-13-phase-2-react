@@ -1,6 +1,4 @@
 export default function TransactionRow({transaction, handleRemove}) {
-
-
   return( 
     <tr key={transaction.id}>
       <td>{transaction.id}</td>
