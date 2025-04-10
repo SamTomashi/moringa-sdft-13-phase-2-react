@@ -4,7 +4,10 @@ export default function TransactionForm({setTransactions}) {
     const [type, setType] = useState("Withdrawal")
     const [amount, setAmount] = useState(1)
 
-    let id =  Math.floor(Math.random() * 1000)
+    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  // return letters.charAt(Math.floor(Math.random() * letters.length));
+
+    let id =  `${letters.charAt(Math.floor(Math.random() * letters.length))}${Math.floor(Math.random() * 1000)}${letters.charAt(Math.floor(Math.random() * letters.length))}`
 
     function handleSubmit(event){
         event.preventDefault()
