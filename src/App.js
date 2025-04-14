@@ -1,16 +1,34 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import TransactionsTable from './components/TransactionsTable';
 import TransactionForm from './components/TransactionForm'
 function App() {
 
-  const [transactions, setTransactions] = useState([
-      {
-        id: "M8503V",
-        type: "Deposit",
-        amount: 3000,
-      }
-    ]);
+  const [transactions, setTransactions] = useState([]);
+
+
+  function getTransactions(){
+    fetch("http://localhost:4000/transactions")
+    .then((response) => response.json())
+    .then(data => {
+      setTransactions(data)
+      console.log(transactions)
+    })
+
+    // return function cleanup() {};
+
+  }
+
+  useEffect(getTransactions, [])
+
+
+
+
+  //   function myFunction(){
+  //     console.log("Kenya")
+  //   }
+
+  //  useEffect(myFunction, []);
 
 
   return (

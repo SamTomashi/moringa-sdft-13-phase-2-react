@@ -1,9 +1,13 @@
-const student1 = {
-    name: "Moringa",
-    gender: "F"
+
+
+const div = document.getElementById("container")
+
+
+function displayTransactions(){
+  div.innerHTML= `
+    <ul>
+        <li>Transaction 1</li>
+    </ul>
+  `
 }
 
-
-const key = "gender"
-
-console.log(student1[key])
