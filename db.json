@@ -1,9 +1,9 @@
 {
   "transactions": [
     {
-      "id": "M8503V",
-      "type": "Sending",
-      "amount": 3000
+      "id": "ecda",
+      "type": "Transact",
+      "amount": "1242"
     }
   ]
 }

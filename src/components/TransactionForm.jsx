@@ -21,6 +21,24 @@ export default function TransactionForm({ setTransactions }) {
     });
 
     setTransactions((prev) => [...prev, formData]);
+    postTransaction(formData);
+  };
+
+  const postTransaction = async (transaction) => {
+    try {
+      return await fetch("http://localhost:4000/transactions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(transaction),
+      });
+    } catch (error) {
+      throw new Error(error)
+    }finally{
+
+    }
   };
 
   const handleOnChange = (event) => {
@@ -31,7 +49,7 @@ export default function TransactionForm({ setTransactions }) {
   };
 
   return (
-    <div className="col-6">
+    <div className="col-6 mx-2">
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="transactionType" className="form-label">
