@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div className="container">
-      <div className="d-flex flex-row">
+      <div className="d-flex flex-row py-4">
         <TransactionForm setTransactions={setTransactions} />
         <TransactionsTable
           transactions={transactions}

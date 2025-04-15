@@ -1,9 +1,19 @@
 {
   "transactions": [
     {
-      "id": "ecda",
-      "type": "Transact",
-      "amount": "1242"
+      "id": "1ac0",
+      "type": "sending",
+      "amount": 1
+    },
+    {
+      "id": "X12207P",
+      "type": "sending",
+      "amount": 1
+    },
+    {
+      "id": "A46341S",
+      "type": "sending",
+      "amount": 1
     }
   ]
 }
