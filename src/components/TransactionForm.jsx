@@ -49,7 +49,7 @@ export default function TransactionForm({ setTransactions }) {
   };
 
   return (
-    <div className="col-6 mx-2">
+    <div className="col-3 mx-2">
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="transactionType" className="form-label">
