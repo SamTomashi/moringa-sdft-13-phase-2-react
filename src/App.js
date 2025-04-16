@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import TransactionsTable from "./components/TransactionsTable";
 import TransactionForm from "./components/TransactionForm";
+import NavBar from "./components/NavBar";
 function App() {
   const [transactions, setTransactions] = useState([]);
 
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <div className="container">
+      <NavBar/>
       <div className="d-flex flex-row py-4">
         <TransactionForm setTransactions={setTransactions} />
         <TransactionsTable
