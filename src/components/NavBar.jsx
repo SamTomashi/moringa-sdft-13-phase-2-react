@@ -5,11 +5,11 @@ export default function NavBar(){
         <nav className="navbar navbar-light bg-light">
       <div className="container-fluid">
         <NavLink className="navbar-brand" to="/">
-          Home
+          Logo
         </NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/Contact">Contact us</NavLink>
-        <Link to='contact'>Let's talk</Link>
+        <NavLink to="/about" className={({isActive})=> isActive? 'nav-link active' : 'nav-link'}>About</NavLink>
+        <NavLink to="/contact" className={({isActive})=> isActive? 'nav-link active' : 'nav-link'}>Contact us</NavLink>
+        <NavLink to='/join-us' className={({isActive})=> isActive? 'nav-link active' : 'nav-link'}>Let's talk</NavLink>
       </div>
     </nav>
 
