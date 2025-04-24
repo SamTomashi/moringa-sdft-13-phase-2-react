@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import About from './components/About';
 import Contact from './components/Contact';
 import JoinUs from './components/JoinUs';
+import Transaction from './components/Transaction';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/join-us",
     element: <JoinUs/>
+  },
+  {
+    path: "/transaction/:id",
+    element: <Transaction/>
   }
 ])
 

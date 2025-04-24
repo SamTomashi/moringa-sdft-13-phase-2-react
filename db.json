@@ -3,17 +3,17 @@
     {
       "id": "1ac0",
       "type": "sending",
-      "amount": 1
+      "amount": 50000
     },
     {
       "id": "X12207P",
       "type": "sending",
-      "amount": 1
+      "amount": 100000
     },
     {
       "id": "A46341S",
       "type": "sending",
-      "amount": 1
+      "amount": 4000000
     }
   ]
 }

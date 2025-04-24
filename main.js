@@ -1,13 +1,4 @@
-
-
-const div = document.getElementById("container")
-
-
-function displayTransactions(){
-  div.innerHTML= `
-    <ul>
-        <li>Transaction 1</li>
-    </ul>
-  `
-}
-
+/**
+ * 1. Dynamic routing
+ * 2. Programmatic routing/navigation
+ */
